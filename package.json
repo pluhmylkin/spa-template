@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --open --debug --hot --watch --inline --mode development",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -26,7 +27,9 @@
     "prop-types": "15.6.2",
     "react": "16.6.0",
     "react-dom": "16.6.0",
+    "react-emotion": "9.2.12",
     "webpack": "4.23.1",
-    "webpack-cli": "3.1.2"
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "3.1.10"
   }
 }

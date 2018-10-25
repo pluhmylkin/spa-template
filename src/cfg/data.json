@@ -1,0 +1,29 @@
+{
+  "name": "Company name",
+  "menu": {
+    "items": [
+      {
+        "name": "About",
+        "id": "about"
+      },
+      {
+        "name": "Contacts",
+        "id": "contacts"
+      }
+    ]
+  },
+  "social": [
+    {
+      "name": "fb",
+      "link": "https://www.facebook.com"
+    },
+    {
+      "name": "vk",
+      "link": "https://vk.com/"
+    },
+    {
+      "name": "tw",
+      "link": "https://twitter.com"
+    }
+  ]
+}
