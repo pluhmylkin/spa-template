@@ -8,6 +8,9 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {
+            plugins: ['emotion', 'transform-class-properties'],
+          },
         },
       },
       {

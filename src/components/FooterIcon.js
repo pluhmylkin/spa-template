@@ -4,7 +4,7 @@ import { string, shape } from 'prop-types';
 const FooterIcon = ({ icon }) => {
   return (
     <div>
-      {icon.name}: {icon.link}
+      {icon.name}
     </div>
   );
 };

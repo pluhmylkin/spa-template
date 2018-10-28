@@ -1,8 +1,14 @@
 import React from 'react';
 import { shape, string } from 'prop-types';
+import { NavLink } from 'reactstrap';
 
 const HeaderItem = ({ item }) => {
-  return <a href={`#${item.id}`}> {item.name}</a>;
+  switch (item.header) {
+    case 'Dropdown':
+      return '';
+    default:
+      return <NavLink href={`#${item.id}`}>{item.name}</NavLink>;
+  }
 };
 
 HeaderItem.propTypes = {

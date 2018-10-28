@@ -1,15 +1,20 @@
 import React from 'react';
 import { string } from 'prop-types';
 import FooterIcon from './FooterIcon';
+import { Row, Col } from 'reactstrap';
 
 const Footer = ({ name, social }) => {
   return (
-    <div>
-      {new Date().getFullYear()} {name}{' '}
+    <Row>
+      <Col>
+        {new Date().getFullYear()} {name}
+      </Col>
       {social.map(icon => (
-        <FooterIcon icon={icon} />
+        <Col>
+          <FooterIcon icon={icon} />
+        </Col>
       ))}
-    </div>
+    </Row>
   );
 };
 

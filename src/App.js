@@ -2,16 +2,26 @@ import React, { Component } from 'react';
 import Section from './components/Section';
 import Header from './components/Header';
 
-import { name, menu, social } from './cfg/data.json';
+import { name, body, social } from './cfg/data.json';
 import Footer from './components/Footer';
 import { Container } from 'reactstrap';
 class App extends Component {
+  state = {
+    isOpen: false,
+  };
+
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    });
+  };
   render() {
-    const { items } = menu;
+    const { sections } = body;
+    const { isOpen } = this.state;
     return (
       <Container>
-        <Header name={name} items={items} />
-        {items.map(item => (
+        <Header name={name} items={sections} isOpen={isOpen} toggle={this.toggle} />
+        {sections.map(item => (
           <Section item={item} />
         ))}
         <Footer name={name} social={social} />
