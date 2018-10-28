@@ -1,5 +1,5 @@
-import React from "react";
-import { string, shape } from "prop-types";
+import React from 'react';
+import { string, shape } from 'prop-types';
 
 const Section = ({ item }) => {
   return (
@@ -12,8 +12,8 @@ const Section = ({ item }) => {
 Section.propTypes = {
   item: shape({
     name: string,
-    id: string
-  }).isRequired
+    id: string,
+  }).isRequired,
 };
 
 export default Section;
