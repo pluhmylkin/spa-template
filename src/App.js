@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 
-import data from './cfg/data';
+import data from './cfg/fullExample';
 import Footer from './components/Footer/Footer';
 import { Container } from 'reactstrap';
 class App extends Component {
