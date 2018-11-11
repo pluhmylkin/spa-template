@@ -1,6 +1,11 @@
+const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  output: {
+    path: path.join(__dirname, '/docs/'),
+    filename: 'main.js',
+  },
   module: {
     rules: [
       {
