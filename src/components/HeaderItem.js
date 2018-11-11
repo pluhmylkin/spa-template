@@ -3,7 +3,7 @@ import { shape, string } from 'prop-types';
 import { NavLink } from 'reactstrap';
 
 const HeaderItem = ({ item }) => {
-  switch (item.header) {
+  switch (item.headerType) {
     case 'Dropdown':
       return '';
     default:

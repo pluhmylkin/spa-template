@@ -13,7 +13,7 @@ const Header = ({ name, items, isOpen, toggle }) => {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           {items.map(item => (
-            <NavItem>
+            <NavItem key={item.id}>
               <HeaderItem item={item} />
             </NavItem>
           ))}

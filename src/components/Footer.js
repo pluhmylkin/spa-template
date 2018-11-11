@@ -1,5 +1,5 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, func, arrayOf, shape } from 'prop-types';
 import FooterIcon from './FooterIcon';
 import { Row, Col } from 'reactstrap';
 
@@ -10,7 +10,7 @@ const Footer = ({ name, social }) => {
         {new Date().getFullYear()} {name}
       </Col>
       {social.map(icon => (
-        <Col>
+        <Col key={icon.name}>
           <FooterIcon icon={icon} />
         </Col>
       ))}
@@ -20,6 +20,11 @@ const Footer = ({ name, social }) => {
 
 Footer.propTypes = {
   name: string.isRequired,
+  social: arrayOf(shape({
+    link: string,
+    name: string,
+    icon: func,
+  })),
 };
 
 export default Footer;
