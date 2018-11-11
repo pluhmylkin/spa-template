@@ -1,7 +1,7 @@
 import { FiInstagram, FiFacebook, FiTwitter } from 'react-icons/fi';
 import Default from '../components/sections/Default';
 import Contact from '../components/sections/Contact';
-import Service from '../components/sections/Service';
+import Service from '../components/sections/Service/Service';
 
 export default {
   name: 'Company name',

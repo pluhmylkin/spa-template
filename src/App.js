@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 
 import data from './cfg/data';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 import { Container } from 'reactstrap';
 class App extends Component {
   state = {
