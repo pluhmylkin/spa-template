@@ -1,25 +1,23 @@
 import React from 'react';
 import { string, shape, arrayOf, bool, func } from 'prop-types';
-import HeaderItem from './HeaderItem';
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem } from 'reactstrap';
+import HeaderItem from './HeaderItem';
 
-const Header = ({ name, items, isOpen, toggle }) => {
-  return (
-    <Navbar color="light" light expand="md">
-      <NavbarBrand href="/">{name}</NavbarBrand>
-      <NavbarToggler onClick={toggle} />
-      <Collapse isOpen={isOpen} navbar>
-        <Nav className="ml-auto" navbar>
-          {items.map(item => (
-            <NavItem key={item.id}>
-              <HeaderItem item={item} />
-            </NavItem>
-          ))}
-        </Nav>
-      </Collapse>
-    </Navbar>
-  );
-};
+const Header = ({ name, items, isOpen, toggle }) => (
+  <Navbar color="light" light expand="md">
+    <NavbarBrand href="/">{name}</NavbarBrand>
+    <NavbarToggler onClick={toggle} />
+    <Collapse isOpen={isOpen} navbar>
+      <Nav className="ml-auto" navbar>
+        {items.map(item => (
+          <NavItem key={item.id}>
+            <HeaderItem item={item} />
+          </NavItem>
+        ))}
+      </Nav>
+    </Collapse>
+  </Navbar>
+);
 
 Header.propTypes = {
   name: string.isRequired,
@@ -29,8 +27,8 @@ Header.propTypes = {
       id: string,
     })
   ).isRequired,
-  isOpen: bool,
-  toggle: func,
+  isOpen: bool.isRequired,
+  toggle: func.isRequired,
 };
 
 export default Header;

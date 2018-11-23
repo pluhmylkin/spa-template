@@ -8,10 +8,14 @@ class Service extends PureComponent {
     isOpenModal: false,
   };
 
-  toggleModal = () => this.setState({ isOpenModal: !this.state.isOpenModal });
+  toggleModal = () => {
+    const { isOpenModal } = this.state;
+    this.setState({ isOpenModal: !isOpenModal });
+  };
 
   render() {
     const { item } = this.props;
+    const { isOpenModal } = this.state;
     return (
       <Card id={item.id}>
         <CardBody>
@@ -25,11 +29,7 @@ class Service extends PureComponent {
                   <Button color="secondary" onClick={this.toggleModal}>
                     {service.name}
                   </Button>
-                  <ServiceModal
-                    service={service}
-                    toggle={this.toggleModal}
-                    isOpen={this.state.isOpenModal}
-                  />
+                  <ServiceModal service={service} toggle={this.toggleModal} isOpen={isOpenModal} />
                 </CardBody>
               </Col>
             ))}
@@ -53,7 +53,7 @@ Service.propTypes = {
         img: string.isRequired,
       })
     ),
-  }),
+  }).isRequired,
 };
 
 export default Service;

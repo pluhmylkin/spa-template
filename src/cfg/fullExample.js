@@ -36,8 +36,7 @@ export default {
           {
             name: 'SPA Template',
             shortDescription: 'Short description SPA template',
-            description:
-              "SPA TEMPLATE",
+            description: 'SPA TEMPLATE',
             img: '',
           },
         ],

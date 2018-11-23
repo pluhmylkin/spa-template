@@ -7,17 +7,19 @@ import Header from './components/Header/Header';
 
 const Section = styled('section')`
   padding: 15px 0;
-`
+`;
 class App extends Component {
   state = {
     isOpen: false,
   };
 
   toggle = () => {
+    const { isOpen } = this.state;
     this.setState({
-      isOpen: !this.state.isOpen,
+      isOpen: !isOpen,
     });
   };
+
   render() {
     const { name, body, social } = data;
     const { sections } = body;
