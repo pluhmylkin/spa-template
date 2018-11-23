@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import Header from './components/Header/Header';
-
+import { Container } from 'reactstrap';
+import styled from 'react-emotion';
 import data from './cfg/fullExample';
 import Footer from './components/Footer/Footer';
-import { Container } from 'reactstrap';
+import Header from './components/Header/Header';
+
+const Section = styled('section')`
+  padding: 15px 0;
+`
 class App extends Component {
   state = {
     isOpen: false,
@@ -22,7 +26,9 @@ class App extends Component {
       <Container>
         <Header name={name} items={sections} isOpen={isOpen} toggle={this.toggle} />
         {sections.map(item => (
-          <item.component key={item.id} item={item} />
+          <Section>
+            <item.component key={item.id} item={item} />
+          </Section>
         ))}
         <Footer name={name} social={social} />
       </Container>

@@ -1,10 +1,10 @@
-import { FiInstagram, FiFacebook, FiTwitter } from 'react-icons/fi';
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import Default from '../components/sections/Default';
 import Contact from '../components/sections/Contact';
 import Service from '../components/sections/Service/Service';
 
 export default {
-  name: 'Company name',
+  name: 'Andrei Pliukhaev',
   body: {
     sections: [
       {
@@ -22,23 +22,23 @@ export default {
         name: 'Contacts',
         component: Contact,
 
-        address: 'Pacific ocean',
+        address: 'Russia, Krasnoyarsk',
         phone: '1234567890',
         email: 'example@example.com',
       },
       {
-        id: 'services',
+        id: 'projects',
         headerType: 'Link',
-        name: 'Services',
+        name: 'Projects',
         component: Service,
 
         services: [
           {
-            name: 'service one',
-            shortDescription: 'Short description service one',
+            name: 'SPA Template',
+            shortDescription: 'Short description SPA template',
             description:
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            img: 'imgUrl',
+              "SPA TEMPLATE",
+            img: '',
           },
         ],
       },
@@ -46,14 +46,14 @@ export default {
   },
   social: [
     {
-      name: 'fb',
-      link: 'https://www.facebook.com',
-      icon: FiFacebook,
+      name: 'Github',
+      link: 'https://github.com/pluhmylkin',
+      icon: FiGithub,
     },
     {
-      name: 'tw',
-      link: 'https://twitter.com',
-      icon: FiTwitter,
+      name: 'LinkedIn',
+      link: 'https://www.linkedin.com/in/andrei-pliukhaev/',
+      icon: FiLinkedin,
     },
   ],
 };

@@ -2,9 +2,13 @@ import React from 'react';
 import { string, func, arrayOf, shape } from 'prop-types';
 import FooterIcon from './FooterIcon';
 import { Row, Col } from 'reactstrap';
+import styled from 'react-emotion';
 
-const Footer = ({ name, social }) => {
-  return (
+const Style = styled('section')`
+  margin: 15px;
+`;
+const Footer = ({ name, social }) => (
+  <Style>
     <Row>
       <Col>
         {new Date().getFullYear()} {name}
@@ -15,16 +19,18 @@ const Footer = ({ name, social }) => {
         </Col>
       ))}
     </Row>
-  );
-};
+  </Style>
+);
 
 Footer.propTypes = {
   name: string.isRequired,
-  social: arrayOf(shape({
-    link: string,
-    name: string,
-    icon: func,
-  })),
+  social: arrayOf(
+    shape({
+      link: string,
+      name: string,
+      icon: func,
+    })
+  ),
 };
 
 export default Footer;

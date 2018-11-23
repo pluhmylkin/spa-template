@@ -19,7 +19,7 @@ class Service extends PureComponent {
           <Row>
             {item.services.map(service => (
               <Col key={service.name}>
-                <img width="100%" src={service.img} alt={service.name} />
+                {service.img && <img width="100%" src={service.img} alt={service.name} />}
                 <CardBody>
                   <CardText>{service.shortDescription}</CardText>
                   <Button color="secondary" onClick={this.toggleModal}>

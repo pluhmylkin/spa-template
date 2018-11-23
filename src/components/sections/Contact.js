@@ -13,7 +13,7 @@ const Contact = ({ item }) => {
         <CardTitle>{item.name}</CardTitle>
         <CardBody>
           <Row>
-            <Col style={{ height: '300px', width: '400px' }}>Map will be here</Col>
+            <Col style={{ height: '200px', width: '200px' }}>Map will be here</Col>
             <Col>
               {item.address && (
                 <div>

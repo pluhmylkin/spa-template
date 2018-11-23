@@ -1,9 +1,7 @@
 import React from 'react';
-import { string, shape, arrayOf } from 'prop-types';
+import { string, shape, arrayOf, bool, func } from 'prop-types';
 import HeaderItem from './HeaderItem';
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem } from 'reactstrap';
-
-
 
 const Header = ({ name, items, isOpen, toggle }) => {
   return (
@@ -31,6 +29,8 @@ Header.propTypes = {
       id: string,
     })
   ).isRequired,
+  isOpen: bool,
+  toggle: func,
 };
 
 export default Header;
