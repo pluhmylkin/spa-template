@@ -17,19 +17,19 @@ const Contact = ({ item }) => (
             {item.address && (
               <div>
                 <FaHome />
-                {item.address}
+                {` ${item.address}`}
               </div>
             )}
             {item.email && (
               <div>
                 <FaAddressCard />
-                {item.email}
+                {` ${item.email}`}
               </div>
             )}
             {item.phone && (
               <div>
                 <FaPhone />
-                {item.phone}
+                {` ${item.phone}`}
               </div>
             )}
           </Col>

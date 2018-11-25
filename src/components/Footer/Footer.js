@@ -12,7 +12,7 @@ const Footer = ({ name, social }) => (
     <Row>
       <Col>
         {new Date().getFullYear()}
-        {name}
+        {` ${name}`}
       </Col>
       {social.map(icon => (
         <Col key={icon.name}>

@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
 import { shape, string, arrayOf, func } from 'prop-types';
-import { Card, CardBody, CardTitle, CardText, Row, Col, Button } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, Row, Col } from 'reactstrap';
 import ServiceModal from './ServiceModal';
+import ServiceLink from './ServiceLink';
+import BaseButton from '../../buttons/BaseButton';
 
 class Service extends PureComponent {
   state = {
@@ -26,10 +28,16 @@ class Service extends PureComponent {
                 {service.img && <img width="100%" src={service.img} alt={service.name} />}
                 <CardBody>
                   <CardText>{service.shortDescription}</CardText>
-                  <Button color="secondary" onClick={this.toggleModal}>
-                    {service.name}
-                  </Button>
-                  <ServiceModal service={service} toggle={this.toggleModal} isOpen={isOpenModal} />
+                  {(service.link && <ServiceLink link={service.link} name={service.name} />) || (
+                    <div>
+                      <BaseButton title={service.name} onClick={this.toggleModal} />
+                      <ServiceModal
+                        service={service}
+                        toggle={this.toggleModal}
+                        isOpen={isOpenModal}
+                      />
+                    </div>
+                  )}
                 </CardBody>
               </Col>
             ))}
@@ -50,7 +58,7 @@ Service.propTypes = {
         shortDescription: string,
         description: string,
         name: string,
-        img: string.isRequired,
+        img: string,
       })
     ),
   }).isRequired,
