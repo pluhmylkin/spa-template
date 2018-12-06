@@ -20,7 +20,7 @@ const Header = ({ name, items, isOpen, toggle }) => (
 );
 
 Header.propTypes = {
-  name: string.isRequired,
+  name: string,
   items: arrayOf(
     shape({
       name: string,
@@ -29,6 +29,10 @@ Header.propTypes = {
   ).isRequired,
   isOpen: bool.isRequired,
   toggle: func.isRequired,
+};
+
+Header.defaultProps = {
+  name: '',
 };
 
 export default Header;

@@ -21,7 +21,7 @@ class App extends Component {
   };
 
   render() {
-    const { name, body, social } = data;
+    const { name, body, social, footer } = data;
     const { sections } = body;
     const { isOpen } = this.state;
     return (
@@ -32,7 +32,7 @@ class App extends Component {
             <item.component key={item.id} item={item} />
           </Section>
         ))}
-        <Footer name={name} social={social} />
+        <Footer name={name} social={social} footer={footer} />
       </Container>
     );
   }
